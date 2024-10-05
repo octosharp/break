@@ -13,7 +13,7 @@ export default function Button({ text, anotherText }: ButtonProps) {
 		<div className="block">
 			<div>
 				<button
-					className="button text-white text-2xl"
+					className="button text-white text-2xl "
 					onClick={toggleStartStop}
 				>
 					{isPlaying ? <h1> {text}</h1> : <h1> {anotherText}</h1>}

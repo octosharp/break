@@ -1,8 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
 .home{
-  background-image: url(./assets/wallpapers/giphy.gif), url(./assets/wallpapers/sec.gif), url(./assets//wallpapers/rain.gif), url(./assets/wallpapers/4.gif), url(./assets//wallpapers//5.gif);
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -11,6 +12,7 @@
   position: absolute;
   background-position: center;
   background-color:transparent;
+  alt:Pending ;
 }
 @keyframes animate {
   0%{
@@ -41,6 +43,12 @@
 
 .timer{
   font-family: 'eightBitBold';
-  font-size: 200px;
+  font-size: 12.6rem;
   filter: drop-shadow(-2px 15px 5px black);
+}
+.musicList{
+  height: 12.2rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6D2ADC #B640EB;
 }
