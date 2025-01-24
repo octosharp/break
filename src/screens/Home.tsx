@@ -1,10 +1,9 @@
 import Timer from './components/Timer'
-import Button from '../components/Button'
 import FireSfx from './components/FireSfx'
 import RainSfx from './components/RainSfx'
 import Music from './components/Music'
 // import MusicPlayer from './MusicPlayer'
-import MusicPlayer from './components/MusicPlayer'
+
 import preLoadImages from '../components/preLoadImages'
 import DropDown from './components/DropDown'
 import RainSound from '../assets/Sounds/rain-sound-188158.mp3'
@@ -15,15 +14,10 @@ import img3 from '../assets/wallpapers/giphy.gif'
 import img4 from '../assets/wallpapers/rain.gif'
 import img5 from '../assets/wallpapers/sec.gif'
 
-import img6 from '../assets/Icons/musicPlayer.png'
-import img7 from '../assets/Icons/toxicity img.jpg'
-import img8 from '../assets/Icons/playBtn.png'
-import img9 from '../assets/Icons/pauseBtn.png'
-import img10 from '../assets/Icons/menuBtn.png'
-import img11 from '../assets/Icons/forwardBtn.png'
-import img12 from '../assets/Icons/backwardBtn.png'
-import img13 from '../assets/Icons/handleMusicPlayer.png'
+import img16 from '../assets/Icons/settings.png'
 import img14 from '../assets/background/musicPlayerBg.png'
+import img15 from '../assets/background/settingBg.png'
+import img17 from '../assets/background/inputbg.png'
 
 const preLoadImgList = [
 	img1,
@@ -31,15 +25,11 @@ const preLoadImgList = [
 	img3,
 	img4,
 	img5,
-	img6,
-	img7,
-	img8,
-	img9,
-	img10,
-	img11,
-	img12,
-	img13,
+
 	img14,
+	img15,
+	img16,
+	img17,
 ]
 
 import { useState } from 'react'
@@ -70,28 +60,10 @@ export default function Home() {
 				<div className=" w-full flex  items-center px-6 justify-end  h-[7%]">
 					<FireSfx audio={fireSound} />
 					<RainSfx audio={rainSound} />
-					<Music audio={audio} />
-					<DropDown
-						fireAudio={fireSound}
-						rainAudio={rainSound}
-						musicAudio={audio}
-					/>
+					<DropDown fireAudio={fireSound} rainAudio={rainSound} />
 				</div>
-				<div className="flex justify-center items-end  h-[58%]">
-					<div className="w-[60rem]  items-center">
-						<Timer />
-						<div className="flex justify-center">
-							<div className="mx-6">
-								<Button text="Start" anotherText="Stop" />
-							</div>
-							<div className="mx-6">
-								<Button text="Reset" anotherText="Reset" />
-							</div>
-						</div>
-					</div>
-				</div>
-				<div className=" w-[32rem] h-[35%]    ">
-					<MusicPlayer handleAudio={setMusic} />
+				<div className="flex justify-center  items-end h-[93%]">
+					<Timer />
 				</div>
 			</div>
 		</div>

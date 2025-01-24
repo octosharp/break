@@ -9,17 +9,11 @@ import musicHandle from '../../assets/Icons/musicHandle.png'
 type DropDownProps = {
 	fireAudio: HTMLAudioElement
 	rainAudio: HTMLAudioElement
-	musicAudio: HTMLAudioElement
 }
-export default function DropDown({
-	fireAudio,
-	rainAudio,
-	musicAudio,
-}: DropDownProps) {
+export default function DropDown({ fireAudio, rainAudio }: DropDownProps) {
 	const [dropdownState, setDropdownState] = useState({ open: false })
 	const [fireVolume, setFireVolume] = useState(100)
 	const [rainVolume, setRainVolume] = useState(100)
-	const [musicVolume, setMusicVolume] = useState(100)
 	const handleDropdownClick = () =>
 		setDropdownState({ open: !dropdownState.open })
 
@@ -37,13 +31,7 @@ export default function DropDown({
 			rainAudio.volume = 0
 		}
 	}
-	function musicHandleVolume(vol: number) {
-		setMusicVolume(vol)
-		musicAudio.volume = vol / 100
-		if (vol === 10) {
-			musicAudio.volume = 0
-		}
-	}
+
 	return (
 		<div>
 			<IconButton
@@ -53,7 +41,7 @@ export default function DropDown({
 			/>
 			{dropdownState.open && (
 				<div>
-					<ul className="absolute mt-5 right-[4.6rem] w-[12.7rem] pt-8 flex items-start   ">
+					<ul className="absolute mt-5 right-[4.5rem] w-[9rem] pt-8 flex  items-center">
 						<SliderBar
 							onChange={fireHandleVolume}
 							value={fireVolume}
@@ -67,14 +55,6 @@ export default function DropDown({
 							value={rainVolume}
 							color={'#ACDDEA'}
 							handleImg={rainHandle}
-							isVertical
-							steps={10}
-						/>
-						<SliderBar
-							onChange={musicHandleVolume}
-							value={musicVolume}
-							color={'#BA7A72'}
-							handleImg={musicHandle}
 							isVertical
 							steps={10}
 						/>

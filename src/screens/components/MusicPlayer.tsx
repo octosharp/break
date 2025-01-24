@@ -138,10 +138,10 @@ export default function MusicPlayer2({ handleAudio }: MusicPlayer2Props) {
 			{menuActive ? (
 				<div
 					style={{ backgroundImage: `url(${musicPlayer})` }}
-					className="bg-contain bg-no-repeat h-full"
+					className="bg-cover bg-no-repeat h-full"
 				>
 					<div className="h-[15rem]  text-white  mr-[2.2rem] ml-[3rem] pt-[1.7rem]">
-						<div className="w-full flex h-[12.54rem]">
+						<div className="w-full flex h-[12.7rem]">
 							<div
 								className=" w-[50%] pt-1 bg-contain bg-no-repeat"
 								style={{
@@ -218,10 +218,10 @@ export default function MusicPlayer2({ handleAudio }: MusicPlayer2Props) {
 			) : (
 				<div
 					style={{ backgroundImage: `url(${musicPlayer})` }}
-					className="bg-contain bg-no-repeat h-full"
+					className="bg-cover bg-no-repeat h-full "
 				>
-					<div className="h-[15rem]  text-white pl-[4.5rem] py-[2.7rem] ">
-						<div className="ml-[3rem] pt-[1rem] h-[11.5rem]">
+					<div className="h-[15rem]  text-white  mr-[2.2rem] ml-[3rem] pt-[1.7rem] ">
+						<div className="ml-[5rem] pt-[2rem] h-[11.5rem] ">
 							<div className="flex  h-[8rem]">
 								<img src={music.cover} className="w-[6rem] h-[6rem]" />
 								<div className="pl-[2rem] flex justify-end items-center">
@@ -235,7 +235,7 @@ export default function MusicPlayer2({ handleAudio }: MusicPlayer2Props) {
 									</div>
 								</div>
 							</div>
-							<div className="w-[18rem]">
+							<div className="w-[18rem] flex justify-center ">
 								<SliderBar
 									handleImg={handleMusicPlayer}
 									value={progress}
