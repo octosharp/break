@@ -1,9 +1,6 @@
+import Home from './screens/Home'
 const App = () => {
-	return (
-		<div>
-			<h1 className="text-3xl">Init Break</h1>
-		</div>
-	)
+	return <Home />
 }
 
 export default App

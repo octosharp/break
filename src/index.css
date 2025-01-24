@@ -1,3 +1,54 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.home{
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  animation: animate 100s linear infinite alternate;
+  position: absolute;
+  background-position: center;
+  background-color:transparent;
+  alt:Pending ;
+}
+@keyframes animate {
+  0%{
+      background-image: url(./assets/wallpapers/giphy.gif);
+  }
+  25%{
+      background-image: url(./assets/wallpapers/sec.gif);
+  }
+  50%{
+      background-image: url(./assets/wallpapers/rain.gif);
+  }
+  75%{
+      background-image: url(./assets/wallpapers/forth.gif);
+  }
+  100%{
+      background-image: url(./assets/wallpapers/fifth.gif);
+  }
+}
+
+@font-face {
+  font-family: 'eightBitBold';
+  src: url(./assets/fonts/PixelOperator8-Bold.ttf);
+}
+@font-face {
+  font-family: 'eightBit';
+  src: url(./assets/fonts/PixelOperator8.ttf);
+}
+
+.timer{
+  font-family: 'eightBitBold';
+  font-size: 12.6rem;
+  filter: drop-shadow(-2px 15px 5px black);
+}
+.musicList{
+  height: 12.2rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6D2ADC #B640EB;
+}

@@ -1,0 +1,21 @@
+.container {
+  position: relative;
+  display: inline-block;
+
+}
+.button {
+  padding: 0;
+  width: 100px;
+  border: 0;
+  background-color: #fff;
+  color: #fff;
+  cursor: pointer;
+  outline: 0;
+  font-size: 20px;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+ }
+

@@ -1,0 +1,24 @@
+.sliderHandle{
+    top: -0.3rem;
+    background-position: center;
+    background-size: cover;
+
+}
+.container{
+  position: relative;
+  height: 1rem;
+  background-color: #e3e3e3;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.progress{
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color:rgb(223, 152, 152);
+  border-radius: 12px;
+  -moz-transition: 0.5s;
+  transition: width 0.5s;
+  transition-timing-function:ease;
+}

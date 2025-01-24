@@ -1,0 +1,9 @@
+.input {
+  width: 3.5rem;
+  background-color: transparent;
+}
+.input:focus {
+  border: none;
+  -moz-appearance: none;
+  outline: none;
+}
